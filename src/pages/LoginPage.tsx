@@ -22,7 +22,7 @@ function LoginPage() {
         <h1 className="font-jakarta text-2xl font-extrabold text-blue-900 mt-4">MIS - MINISPORTS</h1>
 
         {/* Flex container for the icons */}
-        <div className="flex flex-row justify-center items-center mt-10 gap-10">
+        <div className="absolute mt-10 gap-10 bottom-36 left-0">
           <img
             src={bigicon}
             alt="icon"
@@ -31,13 +31,16 @@ function LoginPage() {
             className="flex justify-start items-start px-0  "
           />
 
+        
+        </div>
+        <div className="absolute mt-10 gap-10 bottom-28 right-16">
           <img
-            src={smallicon}
-            alt="icon2"
-            height={40}
-            width={40}
-            className='my-2'
-          />
+              src={smallicon}
+              alt="icon2"
+              height={100}
+              width={100}
+              className='my-2'
+            />
         </div>
 
         {/* Links */}

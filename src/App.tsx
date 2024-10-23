@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import ForgotPassword from "./pages/ForgotPassw";
+import CheckEmail from './pages/CheckEmail';
 
 const routes = createBrowserRouter([
   {
@@ -10,6 +11,10 @@ const routes = createBrowserRouter([
   {
     path: "/forgot-password",
     Component: ForgotPassword,
+  },
+  {
+    path: "/check-email",     // Check password path
+    element: <CheckEmail />,  // Renders CheckPassword component
   },
 ]);
 

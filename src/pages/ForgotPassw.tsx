@@ -46,7 +46,9 @@ const ForgotPassword = () => {
               placeholder="Enter your email"
             />
           </div>
+          
           <button
+          
             type="submit"
             className="w-full px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
@@ -64,7 +66,7 @@ const ForgotPassword = () => {
         {/* Login link */}
         <div className="text-center">
           <p className="text-sm text-gray-500">
-            Remembered your password? <Link to="/login" className="text-blue-500 hover:underline font-jakarta">Login</Link>
+            Remembered your password? <Link to="/" className="text-blue-500 underline hover:underline font-jakarta">Login</Link>
           </p>
         </div>
       </div>
