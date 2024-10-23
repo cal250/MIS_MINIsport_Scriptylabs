@@ -1,14 +1,18 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from '../assets/Logo.svg';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
+  const navigate = useNavigate(); // Create a navigate function
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle forgot password logic here
     console.log('Email submitted:', email);
+
+    // Navigate to the CheckEmail page
+    navigate('/check-email'); // Redirect after submission
   };
 
   return (
