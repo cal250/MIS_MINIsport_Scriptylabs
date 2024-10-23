@@ -1,13 +1,19 @@
 import {
+  AcademicCapIcon,
+  AdjustmentsHorizontalIcon,
   Bars3BottomRightIcon,
-  BookOpenIcon,
-  BuildingLibraryIcon,
+  CheckCircleIcon,
   Cog8ToothIcon,
+  FlagIcon,
+  FolderMinusIcon,
+  FolderOpenIcon,
+  LightBulbIcon,
   RectangleGroupIcon,
-  UserGroupIcon,
+  TrophyIcon,
 } from "@heroicons/react/24/outline";
 
 import { NavigationComponent } from "./NavigationItem";
+import { DocumentIcon } from "@heroicons/react/24/outline";
 function NavigationMenu({
   maximize,
   setMaximize,
@@ -49,97 +55,105 @@ function NavigationMenu({
         />
 
         <NavigationComponent
-          Item={<BuildingLibraryIcon className="w-7" />}
+          Item={<FlagIcon className="w-7" />}
           label="National teams "
           showLabel={maximize}
           link="/nationalTeams"
         />
 
         <NavigationComponent
-          Item={<UserGroupIcon className="w-7" />}
+          Item={<AdjustmentsHorizontalIcon className="w-7" />}
           label="Federations"
           showLabel={maximize}
           link="/federations"
         />
 
         <NavigationComponent
-          Item={<BookOpenIcon className="w-7" />}
+          Item={<LightBulbIcon className="w-7" />}
           label="sport professionals"
           showLabel={maximize}
           link="/sportProfessionals"
         />
         <NavigationComponent
-          Item={<Cog8ToothIcon className="w-7" />}
+          Item={<AcademicCapIcon className="w-7" />}
           label="trainings"
           showLabel={maximize}
           link="/trainings"
         />
         <NavigationComponent
-          Item={<Cog8ToothIcon className="w-7" />}
+          Item={<AcademicCapIcon className="w-7" />}
           label="Isonga professionals"
           showLabel={maximize}
           link="/isonga"
         />
         <NavigationComponent
-          Item={<Cog8ToothIcon className="w-7" />}
+          Item={<CheckCircleIcon className="w-7" />}
           label="Academies"
           showLabel={maximize}
           link="/academies"
         />
         <NavigationComponent
-          Item={<Cog8ToothIcon className="w-7" />}
+          Item={<CheckCircleIcon className="w-7" />}
           label="Infrastructure"
           showLabel={maximize}
           link="/infrastructure"
         />
         <NavigationComponent
-          Item={<Cog8ToothIcon className="w-7" />}
+          Item={<FolderMinusIcon className="w-7" />}
           label="Sports tourism "
           showLabel={maximize}
           link="/sportst"
         />
 
         <NavigationComponent
-          Item={<Cog8ToothIcon className="w-7" />}
+          Item={<FolderMinusIcon className="w-7" />}
           label="Documents"
           showLabel={maximize}
           link="/documents"
         />
         <NavigationComponent
-          Item={<Cog8ToothIcon className="w-7" />}
+          Item={<FolderOpenIcon className="w-7" />}
           label="Contracts"
           showLabel={maximize}
           link="/contracts"
         />
         <NavigationComponent
-          Item={<Cog8ToothIcon className="w-7" />}
+          Item={<CheckCircleIcon className="w-7" />}
           label="employees"
           showLabel={maximize}
           link="/employees"
         />
         <NavigationComponent
-          Item={<Cog8ToothIcon className="w-7" />}
+          Item={<CheckCircleIcon className="w-7" />}
           label="users"
           showLabel={maximize}
           link="/users"
         />
         <NavigationComponent
-          Item={<Cog8ToothIcon className="w-7" />}
+          Item={<CheckCircleIcon className="w-7" />}
           label="paterners"
           showLabel={maximize}
           link="/paterners"
         />
         <NavigationComponent
-          Item={<Cog8ToothIcon className="w-7" />}
+          Item={<DocumentIcon className="w-7" />}
           label="reports "
           showLabel={maximize}
           link="/reports"
         />
         <NavigationComponent
-          Item={<Cog8ToothIcon className="w-7" />}
+          Item={<TrophyIcon className="w-7" />}
           label="sports for all "
           showLabel={maximize}
           link="/sports"
+        />
+      </div>
+
+      <div className="mt-20">
+        <NavigationComponent
+          Item={<Cog8ToothIcon className="w-7" />}
+          label="Settings "
+          showLabel={maximize}
         />
       </div>
     </div>
