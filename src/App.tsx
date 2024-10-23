@@ -1,17 +1,20 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
+import ForgotPassword from "./pages/ForgotPassw";
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LoginPage from './pages/LoginPage';
-import ForgotPassword from './pages/ForgotPassw';
+const routes = createBrowserRouter([
+  {
+    path: "/",
+    Component: LoginPage,
+  },
+  {
+    path: "/forgot-password",
+    Component: ForgotPassword,
+  },
+]);
 
 const App = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-      </Routes>
-    </Router>
-  );
+  return <RouterProvider router={routes} />;
 };
 
 export default App;
