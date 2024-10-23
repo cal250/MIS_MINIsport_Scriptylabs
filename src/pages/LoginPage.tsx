@@ -17,18 +17,18 @@ function LoginPage() {
   return (
     <div className="flex min-h-screen bg-white font-jakarta">
       {/* Left Section */}
-      <div className="hidden md:flex w-1/2 bg-blue-50 items-center justify-center flex-col">
+      <div className="hidden md:flex w-1/2 bg-blue-50 items-center justify-center flex-col relative">
         <img src={Logo} alt="MINISPORTS Logo" className="w-24" />
         <h1 className="font-jakarta text-2xl font-extrabold text-blue-900 mt-4">MIS - MINISPORTS</h1>
 
         {/* Flex container for the icons */}
-        <div className="flex justify-between items-center w-full px-4 mt-10">
+        <div className="flex flex-row justify-center items-center mt-10 gap-10">
           <img
             src={bigicon}
             alt="icon"
             height={200}
             width={200}
-            className="mb-6"
+            className="flex justify-start items-start px-0  "
           />
 
           <img
@@ -36,21 +36,28 @@ function LoginPage() {
             alt="icon2"
             height={40}
             width={40}
-            className='mx-10 my-2 gap-6 py-10 flex'
+            className='my-2'
           />
+        </div>
+
+        {/* Links */}
+        <div className="absolute bottom-6 flex justify-center space-x-6 text-sm  text-blue-700">
+          <a href="/terms" className="hover:underline">Terms of service</a>
+          <a href="/privacy" className="hover:underline">Privacy policy</a>
+          <a href="/support" className="hover:underline">Support</a>
         </div>
       </div>
 
       {/* Right Section */}
-      <div className="flex w-full md:w-1/2 justify-center items-center p-6">
-        <div className="max-w-md w-full">
+      <div className="flex w-full md:w-1/2 justify-center items-center p-6 mt-20 ml-4 mr-4">
+        <div className="max-w-lg w-full"> {/* Increased max width */}
           {/* Logo only for smaller screens */}
           <div className="block md:hidden mb-4 text-center">
             <img src={Logo} alt="MINISPORTS Logo" className="w-24 mx-auto" />
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-lg border">
+          <form onSubmit={handleSubmit} className="bg-white p-10 rounded-lg shadow-lg border"> {/* Added more padding */}
             <h2 className="text-2xl font-bold text-blue-900 mb-2 justify-center items-center flex">Login to continue</h2>
             <p className="text-gray-500 mb-6">Welcome back, enter your credentials to continue</p>
 
@@ -97,9 +104,14 @@ function LoginPage() {
               Login
             </button>
 
-            <div className="text-center text-sm text-gray-600 my-4">OR</div>
+            {/* Added more space between OR divider and the text */}
+            <div className="flex items-center justify-center mt-8 gap-4"> 
+              <hr className="w-full border-gray-300" />
+              <span className="px-2 text-sm text-gray-500 font-jakarta">OR</span>
+              <hr className="w-full border-gray-300" />
+            </div>
 
-            <p className="text-center text-sm">
+            <p className="text-center text-sm mt-8"> {/* Increased space here */}
               Don’t have an account? <a href="/contact-us" className="text-blue-600 hover:underline">Contact us</a>
             </p>
           </form>
