@@ -1,12 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import ForgotPassword from "./pages/ForgotPassw";
-<<<<<<< HEAD
+
 import DashboardLayout from "./components/custom/DashboardLayout";
 import Dashboard from "./pages/Dashboard";
-=======
-import CheckEmail from './pages/CheckEmail';
->>>>>>> 947fba54590e8f1abf4df5595625d9ba6c154372
+
+import CheckEmail from "./pages/CheckEmail";
 
 const routes = createBrowserRouter([
   {
@@ -18,7 +17,6 @@ const routes = createBrowserRouter([
     Component: ForgotPassword,
   },
   {
-<<<<<<< HEAD
     path: "/dashboard",
     Component: DashboardLayout,
     children: [
@@ -27,11 +25,12 @@ const routes = createBrowserRouter([
         Component: Dashboard,
       },
     ],
-=======
-    path: "/check-email",     // Check password path
-    element: <CheckEmail />,  // Renders CheckPassword component
->>>>>>> 947fba54590e8f1abf4df5595625d9ba6c154372
   },
+  {
+    path: "/check-email", // Check password path
+    element: <CheckEmail />,
+  },
+  // Renders CheckPassword component
 ]);
 
 const App = () => {
